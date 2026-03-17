@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:gravity="end"
+            android:padding="20dp"
+            android:text="0"
+            android:textColor="#000000"
+            android:textSize="48sp"
+            android:background="#F3F3F3" />
+
+        <androidx.gridlayout.widget.GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:columnCount="5"
+            app:rowCount="6">
+
+            <Button
+                android:id="@+id/butt_clear"
+                android:backgroundTint="@color/calc_display_clear"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:onClick="onDeleteClick"
+                android:text="C"
+                app:layout_column="0"
+                app:layout_columnWeight="1"
+                app:layout_row="0"
+                app:layout_rowWeight="1"
+                app:layout_columnSpan="2"/>
+
+            <Button
+                android:id="@+id/butt_clearall"
+                android:backgroundTint="@color/calc_display_clear"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_column="2"
+                app:layout_row="0"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                android:text="AC" />
+
+            <Button
+                android:id="@+id/butt_mod"
+                android:backgroundTint="@color/calc_operator"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_column="3"
+                app:layout_row="0"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                android:text="%" />
+
+            <Button
+                android:id="@+id/butt_7"
+                android:backgroundTint="@color/calc_digit"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                android:onClick="onNumberClick"
+                android:text="7"
+                app:layout_column="0"
+                app:layout_columnWeight="1"
+                app:layout_row="1"
+                app:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/butt_8"
+                android:backgroundTint="@color/calc_digit"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:onClick="onNumberClick"
+                android:text="8"
+                app:layout_column="1"
+                app:layout_columnWeight="1"
+                app:layout_row="1"
+                app:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/butt_9"
+                android:backgroundTint="@color/calc_digit"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:onClick="onNumberClick"
+                android:text="9"
+                app:layout_column="2"
+                app:layout_columnWeight="1"
+                app:layout_row="1"
+                app:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/butt_mul"
+                android:backgroundTint="@color/calc_operator"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:onClick="onOpClick"
+                android:text="x"
+                app:layout_column="3"
+                app:layout_columnWeight="1"
+                app:layout_row="2"
+                app:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/butt_4"
+                android:backgroundTint="@color/calc_digit"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:onClick="onNumberClick"
+                android:text="4"
+                app:layout_column="0"
+                app:layout_columnWeight="1"
+                app:layout_row="2"
+                app:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/butt_5"
+                android:backgroundTint="@color/calc_digit"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:onClick="onNumberClick"
+                android:text="5"
+                app:layout_column="1"
+                app:layout_columnWeight="1"
+                app:layout_row="2"
+                app:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/butt_6"
+                android:backgroundTint="@color/calc_digit"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:onClick="onNumberClick"
+                android:text="6"
+                app:layout_column="2"
+                app:layout_columnWeight="1"
+                app:layout_row="2"
+                app:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/butt_minus"
+                android:backgroundTint="@color/calc_operator"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:onClick="onOpClick"
+                android:text="-"
+                app:layout_column="3"
+                app:layout_columnWeight="1"
+                app:layout_row="3"
+                app:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/butt_div"
+                android:backgroundTint="@color/calc_operator"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:onClick="onOpClick"
+                android:text="/"
+                app:layout_column="3"
+                app:layout_columnWeight="1"
+                app:layout_row="1"
+                app:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/butt_1"
+                android:backgroundTint="@color/calc_digit"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:onClick="onNumberClick"
+                android:text="1"
+                app:layout_column="0"
+                app:layout_columnWeight="1"
+                app:layout_row="3"
+                app:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/butt_2"
+                android:backgroundTint="@color/calc_digit"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:onClick="onNumberClick"
+                android:text="2"
+                app:layout_column="1"
+                app:layout_columnWeight="1"
+                app:layout_row="3"
+                app:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/butt_3"
+                android:backgroundTint="@color/calc_digit"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:onClick="onNumberClick"
+                android:text="3"
+                app:layout_column="2"
+                app:layout_columnWeight="1"
+                app:layout_row="3"
+                app:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/butt_plus"
+                android:backgroundTint="@color/calc_operator"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:onClick="onOpClick"
+                android:text="+"
+                app:layout_column="3"
+                app:layout_columnWeight="1"
+                app:layout_row="4"
+                app:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/butt_plus_minus"
+                android:backgroundTint="@color/calc_digit"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:onClick="onPlusMinusClick"
+                android:text="+/-"
+                app:layout_column="0"
+                app:layout_columnWeight="1"
+                app:layout_row="4"
+                app:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/butt_zero"
+                android:backgroundTint="@color/calc_digit"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                android:onClick="onNumberClick"
+                android:text="0"
+                app:layout_column="1"
+                app:layout_columnWeight="1"
+                app:layout_row="4"
+                app:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/butt_dot"
+                android:backgroundTint="@color/calc_digit"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                android:onClick="onNumberClick"
+                android:text=","
+                app:layout_column="2"
+                app:layout_columnWeight="1"
+                app:layout_row="4"
+                app:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/butt_equal"
+                android:backgroundTint="@color/calc_operator"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:onClick="onEqualClick"
+                android:text="="
+                app:layout_column="0"
+                app:layout_columnWeight="1"
+                app:layout_row="5"
+                app:layout_rowWeight="1"
+                app:layout_columnSpan="4"/>
+
+        </androidx.gridlayout.widget.GridLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
